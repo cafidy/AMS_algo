@@ -3,7 +3,6 @@ int main(){
     Graphe ar("arctest.csv","nodetest.csv");
     ar.lecture_noeud();
     ar.lecture_arc();
-    ar.mj_incidence();
-    ar.affiche();
+    ar.find(152376.0,152380.0);
     
 }

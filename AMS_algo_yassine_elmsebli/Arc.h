@@ -5,6 +5,7 @@
 #include<iostream>
 #include<fstream>
 #include<sstream>
+#include<queue>
 
 class Noeud;
 class Graphe; 
@@ -12,17 +13,20 @@ class Graphe;
 class Arc
 {
     friend Graphe;
-    std::string id ;
+    int id ;
+    bool oneway;
+    int lane;
+    std::string name;
+    std::string type ;
+    bool reversed;
+    bool lenght ;
+    int maxspeed;
+
     double idvilled;
     double idvillea;
-    std::string type ;
-    bool onoway;
-    bool es;
-    int distance ;
-    
     public :
-        Arc(std::string id) ;
-        Arc(std::string id, std::string type , bool one,int distance,float villed,float villea);
+        Arc(int id) ;
+        Arc(int id, std::string type , bool one,int distance,bool reversed,float villed,float villea,int lanes,std::string name,int maxspeed);
         //~Arc() ;
         void affiche() ;
 

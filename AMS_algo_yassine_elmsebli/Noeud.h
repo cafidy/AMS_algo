@@ -8,12 +8,15 @@ class Noeud
     double id ;
     double x;
     double y;
+    int degré;
     std::vector<Arc*> arc_e;
     std::vector<Arc*> arc_s;
+    bool viste;
     public :
         Noeud(double id,double x,double y) ;
         void add_arc_e(Arc *e);
         void add_arc_s(Arc *s);
+        void degre();
         //~Noeud() ;
         void affiche() ;
 } ;
